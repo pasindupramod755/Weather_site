@@ -1,13 +1,42 @@
 body{
-    background-image: url(/assets/image/sky.jpg);
+    background-image: url(/assets/image/sky.png);
     background-size: cover;
     /* backdrop-filter: blur(8px); */
 }
 
+.main-details{
+    display: flex;
+    justify-content: space-around;
+}
+
 .today-details{
+    backdrop-filter: blur(20px);
+    padding: 70px;
+    margin: 20px;
+    border: 2px solid;
+    border-color: aliceblue;
+    text-align: center;
 
 }
 
-.Another-deatials{
-    
+
+
+.details{
+    backdrop-filter: blur(50px);
+    margin: 15px;
+    border-radius: 20px;
+    padding: 30px;
+    color: aliceblue;
+    border: 2px solid;
+}
+
+.town{
+    font-weight: 700;
+    color: aliceblue;
+    font-size: 70px;
+}
+
+.item:hover{
+    scale: 1.1;
+    transition: 0.5s;
 }
