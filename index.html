@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg mb-5">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="/assets/image/weather.png" alt="" width="200px" height="40px"></a>
+            <a class="navbar-brand" href="#"><img src="/assets/image/weather.png" alt="" width="200px"
+                    height="40px"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                 aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -30,18 +33,18 @@
     </nav>
 
     <div class="main-details">
-        <div class="today-details rounded">
+        <div class="today-details rounded" data-aos="zoom-in">
             <div>
                 <h1 class="town">Sooriyawewa</h1>
                 <h2>South, Sri Lanka</h2>
             </div>
             <div><img src="/assets/image/animation/rainy-3.svg" alt="" style="width: 200px;width: 200px;">
-                    </div>
+            </div>
             <h1>21.23 <span>°C</span></h1>
             <h1>8/12/2025</h1>
         </div>
 
-        <div class="container">
+        <div class="container" data-aos="zoom-out">
             <div class="row g-3">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 item">
                     <div class="details text-center p-3  rounded shadow-sm">
@@ -169,7 +172,11 @@
 
 
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="/assets/js/app.js"></script>
 </body>
 
 </html>
