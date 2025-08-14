@@ -1,15 +1,14 @@
-body{
-    background-image: url(/assets/image/sky.png);
+body {
+    background-image: url('../image/sky.png');
     background-size: cover;
-    /* backdrop-filter: blur(8px); */
 }
 
-.main-details{
+.main-details {
     display: flex;
     justify-content: space-around;
 }
 
-.today-details{
+.today-details {
     backdrop-filter: blur(20px);
     padding: 70px;
     margin: 20px;
@@ -19,9 +18,7 @@ body{
 
 }
 
-
-
-.details{
+.details {
     backdrop-filter: blur(50px);
     margin: 15px;
     border-radius: 20px;
@@ -30,13 +27,13 @@ body{
     border: 2px solid;
 }
 
-.town{
+.town {
     font-weight: 700;
     color: aliceblue;
     font-size: 70px;
 }
 
-.item:hover{
+.item:hover {
     scale: 1.1;
     transition: 0.5s;
 }
