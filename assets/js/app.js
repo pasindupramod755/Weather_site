@@ -15,13 +15,14 @@ searchCity.addEventListener("keypress",e=>{
 
 
 
-async function callApi(city) {
-    fetch("http://api.weatherapi.com/v1/current.json?key="+id+"&q="+city+"&aqi=no")
-        .then(responce => responce.json())
+function callApi(city) {
+    fetch(`http://api.weatherapi.com/v1/current.json?key=${id}&q=${city}&aqi=no`)
+        .then(response => response.json())
         .then(data => {
             setData(data);
-        })  
+        });
 }
+
 
 
 function setData(data){
