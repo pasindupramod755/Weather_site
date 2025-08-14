@@ -1,5 +1,5 @@
 body{
-    background-image: url(assets/image/sky.png);
+    background-image: url(/assets/image/sky.png);
     background-size: cover;
     /* backdrop-filter: blur(8px); */
 }
