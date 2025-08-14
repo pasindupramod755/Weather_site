@@ -31,6 +31,17 @@ function setData(data){
     document.getElementById("country-img").src = searchContry(data.location.country);
     document.getElementById("celcious").innerText = data.current.temp_c + "°C";
     document.getElementById("date").innerText = data.current.last_updated;
+    document.getElementById("weatherDay").innerText = data.current.condition.text;
+    document.getElementById("windSpeed").innerText = data.current.wind_mph+" mph";
+    document.getElementById("humidity").innerText = data.current.humidity+"%";
+    document.getElementById("cloud").innerText = data.current.cloud+"%";
+    document.getElementById("uv").innerText = data.current.uv;
+    document.getElementById("pressure").innerText = data.current.pressure_mb+"mb";
+    document.getElementById("vis").innerText = data.current.vis_km+"Km";
+
+
+
+
 
 }
 
@@ -977,6 +988,11 @@ let countryImg = [
   {
     "code": "US",
     "country": "United States",
+    "flag": "https://flagcdn.com/us.svg"
+  },
+  {
+    "code": "US",
+    "country": "United States of America",
     "flag": "https://flagcdn.com/us.svg"
   },
   {
