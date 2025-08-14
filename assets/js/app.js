@@ -30,6 +30,7 @@ function setData(data){
     document.getElementById("contry").innerText = data.location.region+", "+data.location.country
     document.getElementById("country-img").src = searchContry(data.location.country);
     document.getElementById("celcious").innerText = data.current.temp_c + "°C";
+    document.getElementById("celcious1").innerText = data.current.temp_c + "°C";
     document.getElementById("date").innerText = data.current.last_updated;
     document.getElementById("weatherDay").innerText = data.current.condition.text;
     document.getElementById("windSpeed").innerText = data.current.wind_mph+" mph";
