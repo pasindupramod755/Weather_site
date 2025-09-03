@@ -1,11 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <h1>Weather</h1>
+    <nav class="navbar navbar-expand-lg mb-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="assets/image/weather.png" alt="" width="200px" height="40px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                </ul>
+                <input id="txtSearch" class="form-control me-2" type="search" placeholder="Search"
+                    aria-label="Search" />
+                <button class="btn btn-outline-info" type="submit">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-details">
+        <div class="today-details rounded" data-aos="zoom-in">
+            <div>
+                <img src="https://flagcdn.com/lk.svg" alt="" width="me-auto" height="60" id="country-img" 8>
+                <h1 id="city-Name" class="town">Sooriyawewa</h1>
+                <h2 id="contry">South, Sri Lanka</h2>
+            </div>
+            <div><img src="assets/image/animation/rainy-3.svg" alt="" style="width: 200px;width: 200px;"
+                    id="status-img">
+            </div>
+            <h1 id="celcious">21.23 <span>°C</span></h1>
+            <h1 id="date" class="fs-3">8/12/2025</h1>
+        </div>
+    </div>
+    <div class="container" data-aos="zoom-out">
+        <div class="row g-3">
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 item">
+                <div class="details text-center p-3 rounded shadow-sm">
+                    <h2 class="fs-4 fw-bold">Temperature</h2>
+                    <h3 class="fs-5 fst-italic fw-semibold" id="celcious1">21.23 <span>°C</span></h3>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 item">
+                <div class="details text-center p-3  rounded shadow-sm">
+                    <h2 class="fs-4 fw-bold">Date Status</h2>
+                    <h3 class="fs-5 fst-italic fw-semibold" id="weatherDay">Rain Day</h3>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 item">
+                <div class="details text-center p-3  rounded shadow-sm">
+                    <h2 class="fs-4 fw-bold">Wind speed</h2>
+                    <h3 class="fs-5 fst-italic fw-semibold" id="windSpeed">40KPH</h3>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 item">
+                <div class="details text-center p-3  rounded shadow-sm">
+                    <h2 class="fs-4 fw-bold">Humidity</h2>
+                    <h3 class="fs-5 fst-italic fw-semibold" id="humidity">60gt</h3>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 item">
+                <div class="details text-center p-3 rounded shadow-sm">
+                    <h2 class="fs-4 fw-bold">Cloud cover</h2>
+                    <h3 class="fs-5 fst-italic fw-semibold" id="cloud">60gt</h3>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 item">
+                <div class="details text-center p-3 rounded shadow-sm">
+                    <h2 class="fs-4 fw-bold">UV index</h2>
+                    <h3 class="fs-5 fst-italic fw-semibold" id="uv">60gt</h3>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 item">
+                <div class="details text-center p-3  rounded shadow-sm">
+                    <h2 class="fs-4 fw-bold">Pressure</h2>
+                    <h3 class="fs-5 fst-italic fw-semibold" id="pressure">60gt</h3>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 item">
+                <div class="details text-center p-3 rounded shadow-sm">
+                    <h2 class="fs-4 fw-bold">Visibility</h2>
+                    <h3 class="fs-5 fst-italic fw-semibold" id="vis">60gt</h3>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <h1 style="color: aliceblue ; text-align: center;">Recently Day</h1>
+    <div class="container">
+        <div class="row g-3">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2 item">
+                <div class="details text-center p-3  rounded shadow-sm bg-white">
+                    <h2 class="fs-4 fw-bold text-black">08/11/2025</h2>
+                    <div><img src="assets/image/animation/rainy-1.svg" alt="" style="width: 100px;width: 100px;">
+                    </div>
+                    <h3 class="fs-5 fst-italic fw-semibold text-black">20.23 <span>°C</span></h3>
+                    <h3 class="fs-5 fst-italic fw-semibold text-black">Rain Day</h3>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2 item">
+                <div class="details text-center p-3  rounded shadow-sm bg-white">
+                    <h2 class="fs-4 fw-bold text-black">08/10/2025</h2>
+                    <div><img src="assets/image/animation/day.svg" alt="" style="width: 100px;width: 100px;">
+                    </div>
+                    <h3 class="fs-5 fst-italic fw-semibold text-black">31.23 <span>°C</span></h3>
+                    <h3 class="fs-5 fst-italic fw-semibold text-black">Sunny Day</h3>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2 item">
+                <div class="details text-center p-3  rounded shadow-sm bg-white">
+                    <h2 class="fs-4 fw-bold text-black">08/09/2025</h2>
+                    <div><img src="assets/image/animation/day.svg" alt="" style="width: 100px;width: 100px;">
+                    </div>
+
+                    <h3 class="fs-5 fst-italic fw-semibold text-black">31.23 <span>°C</span></h3>
+                    <h3 class="fs-5 fst-italic fw-semibold text-black">Sunny Day</h3>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2 item">
+                <div class="details text-center p-3  rounded shadow-sm bg-white">
+                    <h2 class="fs-4 fw-bold text-black">08/08/2025</h2>
+
+                    <div><img src="assets/image/animation/cloudy-day-1.svg" alt="" style="width: 100px;width: 100px;">
+                    </div>
+
+                    <h3 class="fs-5 fst-italic fw-semibold text-black">31.23 <span>°C</span></h3>
+                    <h3 class="fs-5 fst-italic fw-semibold text-black">cloudy Day</h3>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2 item">
+                <div class="details text-center p-3  rounded shadow-sm bg-white">
+                    <h2 class="fs-4 fw-bold text-black">08/07/2025</h2>
+
+                    <div><img src="assets/image/animation/rainy-1.svg" alt="" style="width: 100px;width: 100px;">
+                    </div>
+
+
+                    <h3 class="fs-5 fst-italic fw-semibold text-black">31.23 <span>°C</span></h3>
+                    <h3 class="fs-5 fst-italic fw-semibold text-black">Rain Day</h3>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2 item">
+                <div class="details text-center p-3  rounded shadow-sm bg-white">
+                    <h2 class="fs-4 fw-bold text-black">08/06/2025</h2>
+
+
+                    <div><img src="assets/image/animation/thunder.svg" alt="" style="width: 100px;width: 100px;">
+                    </div>
+
+                    <h3 class="fs-5 fst-italic fw-semibold text-black">31.23 <span>°C</span></h3>
+                    <h3 class="fs-5 fst-italic fw-semibold text-black">Rain Day</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
 </body>
+
 </html>

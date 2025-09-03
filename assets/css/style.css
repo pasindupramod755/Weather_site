@@ -1,0 +1,39 @@
+body {
+    background-image: url('../image/sky.jpg');
+    background-size: cover;
+}
+
+.main-details {
+    display: flex;
+    justify-content: space-around;
+}
+
+.today-details {
+    backdrop-filter: blur(20px);
+    padding: 70px;
+    margin: 20px;
+    border: 2px solid;
+    border-color: aliceblue;
+    text-align: center;
+
+}
+
+.details {
+    backdrop-filter: blur(50px);
+    margin: 15px;
+    border-radius: 20px;
+    padding: 30px;
+    color: aliceblue;
+    border: 2px solid;
+}
+
+.town {
+    font-weight: 700;
+    color: aliceblue;
+    font-size: 70px;
+}
+
+.item:hover {
+    scale: 1.1;
+    transition: 0.5s;
+}
